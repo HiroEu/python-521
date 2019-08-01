@@ -27,7 +27,7 @@ def put_users_by_id(user_id):
 	return 'put users ' + str(user_id)
 
 @app.route('/users/<int:user_id>', methods=[ 'DELETE'])
-def put_users_by_id(user_id):
+def delete_users_by_id(user_id):
 	return 'delete users ' + str(user_id)
 
 @app.route('/users', methods=[ 'POST'])
