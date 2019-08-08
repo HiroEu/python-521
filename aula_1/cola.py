@@ -1,3 +1,4 @@
+
 import sys
 import os
 import bson
@@ -52,7 +53,7 @@ class User:
     
     def authenticate(self, password):
         pass
-    
+
     def delete(self):
         db.users.remove(self.primary_key)
 
@@ -126,7 +127,6 @@ def get_users_by_id(user_id):
 
 @app.route('/users/<user_id>', methods=[ 'PUT' ])
 def put_users_by_id(user_id):
-    
     return 'put users ' + str(user_id)
 
 @app.route('/users/<user_id>', methods=[ 'DELETE' ])
@@ -135,17 +135,17 @@ def delete_users_by_id(user_id):
     user = User.find({ 
         '_id': bson.ObjectId(user_id)
     })
-
-    if not user:
+       
+    if not user:             
         return flask.jsonify({
             'message': 'user not found'
-        }), 404
-    
+         }), 404
+
     user.delete()
 
     return flask.jsonify({
-        'message': 'user deleted'
-    }), 200
+       'message': 'user deleted'
+          }), 200
 
 if __name__ == '__main__':
 
