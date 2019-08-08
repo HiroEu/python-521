@@ -88,6 +88,7 @@ def post_users():
     form = flask.request.json
 
     required_attributes = [ 'name', 'email', 'age', 'password' ]
+
     for attribute in required_attributes:
         if attribute not in form:
             return flask.jsonify({
@@ -127,7 +128,25 @@ def get_users_by_id(user_id):
 @app.route('/users/<user_id>', methods=[ 'PUT' ])
 def put_users_by_id(user_id):
     
-    return 'put users ' + str(user_id)
+    user = User.find({ 
+        '_id': bson.ObjectId(user_id)
+    })
+
+    if not user:
+        return flask.jsonify({
+            'message': 'user not found'
+        }), 404
+    
+    form = flask.request.json
+
+    for key, value in form.items():
+        setattr(user, key, value)
+    
+    user.save()
+
+    return flask.jsonify({
+        'message': 'user updated'
+    }), 200
 
 @app.route('/users/<user_id>', methods=[ 'DELETE' ])
 def delete_users_by_id(user_id):
