@@ -1,0 +1,19 @@
+29/08/2019 09:13:17 | INFO | logs.py | olá mundo
+29/08/2019 09:25:02 | DEBUG | logs.py | mensagem de DEBUG
+29/08/2019 09:25:02 | INFO | logs.py | mensagem de INFO
+29/08/2019 09:25:02 | WARNING | logs.py | mensagem de WARNING
+29/08/2019 09:25:02 | ERROR | logs.py | mensagem de ERROR
+29/08/2019 09:25:02 | CRITICAL | logs.py | mensagem de CRITICAL
+29/08/2019 09:31:27 | WARNING | logs.py | mensagem de WARNING
+29/08/2019 09:31:27 | ERROR | logs.py | mensagem de ERROR
+29/08/2019 09:31:27 | CRITICAL | logs.py | mensagem de CRITICAL
+29/08/2019 09:49:38 | DEBUG | logs.py | mensagem de DEBUG
+29/08/2019 09:49:38 | INFO | logs.py | mensagem de INFO
+29/08/2019 09:49:38 | WARNING | logs.py | mensagem de WARNING
+29/08/2019 09:49:38 | ERROR | logs.py | mensagem de ERROR
+29/08/2019 09:49:38 | CRITICAL | logs.py | mensagem de CRITICAL
+29/08/2019 09:51:05 | DEBUG | logs.py | mensagem de DEBUG
+29/08/2019 09:51:05 | INFO | logs.py | mensagem de INFO
+29/08/2019 09:51:05 | WARNING | logs.py | mensagem de WARNING
+29/08/2019 09:51:05 | ERROR | logs.py | mensagem de ERROR
+29/08/2019 09:51:05 | CRITICAL | logs.py | mensagem de CRITICAL
